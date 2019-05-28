@@ -1,0 +1,28 @@
+.button-container{
+    display:flex;
+}
+
+
+
+.basic{
+padding: 15px 15px;
+font-size: 3rem;
+flex-basis: 25%;
+text-decoration:none;
+
+background-color:#F08080;
+
+    &--large{
+        flex-basis: 75%;
+
+    }
+
+    &--small{
+        flex-basis: 25%;
+    }
+
+    &--red{
+        background-color:#DC143C;
+        color: white;
+    }
+}
