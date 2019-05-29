@@ -1,12 +1,24 @@
+    
 import React from 'react';
 import './App.scss';
 import Display from './components/DisplayComponents/CalculatorDisplay';
 import ButtonsContainer from './components/ButtonComponents/ButtonContainer';
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      total: 0,
+      curNum: null,
+      prevNum: null,
+      operator: ""
+    };
+    console.log(this.state.total);
+  }
 
-  state = {
-    total: 0,
+  onThisClick= (numbThang) => {
+    
+    console.log(numbThang);
   }
 
   render(){
@@ -16,7 +28,7 @@ class App extends React.Component {
       <div className="border container">
 
       <Display />
-      <ButtonsContainer  zero={this.state.total} symbols={symbols} />
+      <ButtonsContainer  zero={this.state.total} symbols={symbols} testing={this.onThisClick}/>
 
     </div>
     );

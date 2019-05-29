@@ -7,11 +7,12 @@ const ActionButton = props =>{
 
     return (
 
-        <button className={
-            props.large ? "basic basic--large " : 'basic basic--small'
-        
+        <button 
+        onClick={e => props.testing(props.symbol)}
+        className={props.large ? "basic basic--large " : 'basic basic--small'
         }>{props.symbol}</button>
     )
 }
 
-export default ActionButton
+export default ActionButton;
+
